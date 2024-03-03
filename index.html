@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Оно Тебе Надо</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,14 +13,14 @@
         <nav class="nav">
             <ul class="nav_links">
                 <li><a href="#home">главная</a></li>
-                <li><a href="#lots">посмотреть лоты</a></li>
+                <li class="separation"><a href="#lots">посмотреть лоты</a></li>
                 <li><a href="#about">об аукционе</a></li>
             </ul>
         </nav>
         <section class="header_logo">
             <h1>ОНО</h1>
-            <h1>ТЕБЕ</h1>
-            <h1>НАДО</h1>
+            <h1 class="line-1">ТЕБЕ</h1>
+            <h1 class="line-2">НАДО</h1>
         </section>
         <ul class="header_contacts">
             <li class="underlined">+9 999 555 5555</li>
@@ -29,22 +30,22 @@
         </ul>
     </header>
     <main>
-        <section id="home">
-            <article>
-                <h1>ОНО</h1>
-                <h1>ТЕБЕ</h1>
-                <h1>НАДО</h1>
+        <section id="home" class="home">
+            <article class="home_title">
+                <h1 class="home_title_start">ОН</h1>
+                <h1 class="home_title_middle">ТЕБЕ</h1>
+                <h1 class="home_title_end">АДО</h1>
             </article>
-            <section>
-                <h4>АУКЦИОН ВЕЩЕЙ В КОТОРЫЕ НИКТО НЕ ВЕРИЛ</h4>
-                <button>
+            <section class="home_subtext">
+                <h4 class="home_subtext-text">АУКЦИОН ВЕЩЕЙ В КОТОРЫЕ НИКТО НЕ ВЕРИЛ</h4>
+                <button class="bet-button">
                     <h4>СДЕЛАТЬ СТАВКУ</h4>
                 </button>
             </section>
         </section>
-        <section id="lots">
-            <h2>ЛОТЫ</h2>
-            <section class="lots">
+        <section id="lots" class="lots">
+            <h2 class="lots_header">ЛОТЫ</h2>
+            <section class="lots_lots-grid">
                 <div class="lot">
                     <img src="" alt="">
                     <h3>ФИЛЬМ РЕЖИССЕРА, КОТОРЫЙ БРОСИЛ КИНОШКОЛУ</h3>
@@ -72,8 +73,12 @@
             </section>
             <p>посмотреть больше</p>
         </section>
-        <section id="about">
-            <img src="" alt="">
+        <section id="about" class="about">
+            <section class="about_logo">
+                <h1>ОНО</h1>
+                <h1 class="line-1">ТЕБЕ</h1>
+                <h1 class="line-2">НАДО</h1>
+            </section>
             <aside>
                 <h2>ОБ АУКЦОНЕ</h2>
                 <article class="about_text">
