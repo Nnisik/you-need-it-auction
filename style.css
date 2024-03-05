@@ -4,7 +4,7 @@
 }
 
 body {
-  background: url(./assets/henry-orr-T8s7dvn51kA-unsplash.jpg);
+  background: url(./assets/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg);
   width: 100%;
   overflow-x: hidden;
   background-repeat: repeat-x;
@@ -117,6 +117,7 @@ body {
   background: rgba(10, 10, 10, 0.5);
   width: calc(100% - 10vh);
   padding: 5vh;
+  background: rgba(10, 10, 10, 0.5);
 }
 
 .home_title {
@@ -129,6 +130,7 @@ body {
   font-size: 100px;
   margin: 10vh 0 15vh;
 }
+
 .home_title_start {
   position: relative;
 }
@@ -182,7 +184,8 @@ body {
 
 .lots {
   background: white;
-  margin: 10vh;
+  width: calc(100% - 10vh * 2);
+  padding: 10vh;
 }
 
 .lots_header {
@@ -255,7 +258,8 @@ body {
 
 .about {
   background: white;
-  margin: 10vh;
+  width: calc(100% - 10vh * 2);
+  padding: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
