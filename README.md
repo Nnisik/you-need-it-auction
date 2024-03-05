@@ -10,4 +10,4 @@ Does not require testing.
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Issues
-* in project section, images stopped appearing
+* in lots section, images are not showwing in deployed version
