@@ -182,8 +182,105 @@ body {
 
 .lots {
   background: white;
+  margin: 10vh;
+}
+
+.lots_header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.lots_lots-grid {
+  margin: 2vh 0 1vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5vh;
+}
+
+.lot {
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.lot-img {
+  position: absolute;
+  background: rgb(19, 3, 61);
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.lot-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  background: rgba(10, 10, 10, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.lot-header,
+.lot-text {
+  margin: 3vh;
+}
+
+.lot-header {
+  font-size: 26px;
+}
+
+.lot-header::first-line {
+  text-decoration: underline;
+}
+
+.lot-text {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.lots_show-more-btn {
+  transform: translateY(-5px);
+  width: fit-content;
+  border-bottom: 1px solid black;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.lots_show-more-btn:hover {
+  border-bottom: 2px solid black;
+  font-weight: bold;
 }
 
 .about {
   background: white;
+  margin: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10vh
+}
+
+.about_logo {
+  margin: 0 15%;
+  background: black;
+  color: white;
+  height: fit-content;
+  padding: 20px 25px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.about_headet {
+  font-size: 24px;
+}
+
+.about_text {
+  width: 70%;
+  margin: 1vh 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh
 }
