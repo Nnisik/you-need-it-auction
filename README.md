@@ -2,6 +2,8 @@
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)</br>
+![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
 Single yet elegant web page auction page designed for an online auction platform, created solely using HTML and CSS.
 
@@ -21,6 +23,7 @@ Single yet elegant web page auction page designed for an online auction platform
 ## Technologies used 
 * HTML
 * CSS
+* JavaScript
 
 ## Getting Started
 
@@ -38,4 +41,8 @@ To get a local copy of this project up and running, follow these simple steps:
 ## Testing
 Does not require testing.
 
+### TODO
+* auto adding active lots information
 
+### Issues
+no issues found
