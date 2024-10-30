@@ -6,55 +6,53 @@
     <title>Оно Тебе Надо</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,
+      wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;
+      1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <header class="header">
-      <nav class="nav">
-        <ul class="nav_links">
-          <li><a href="#home">главная</a></li>
-          <li class="separation"><a href="#lots">посмотреть лоты</a></li>
-          <li><a href="#about">об аукционе</a></li>
+      <div class="header-container">
+        <nav class="nav">
+          <ul class="nav_links">
+            <li><a href="#home">home</a></li>
+            <li class="separation"><a href="#lots">lots</a></li>
+            <li><a href="#about">about</a></li>
+          </ul>
+        </nav>
+        <section class="header_logo">
+          <h1>YOU</h1>
+          <h1 class="line-1">NEED</h1>
+          <h1 class="line-2">IT</h1>
+        </section>
+        <ul class="header_contacts">
+          <li>+9 999 555 5555</li>
+          <li>info@sobaka.ge</li>
+          <li>наб. Принсенгранг 263-265</li>
+          <li>Амстердам</li>
         </ul>
-      </nav>
-      <section class="header_logo">
-        <h1>ОНО</h1>
-        <h1 class="line-1">ТЕБЕ</h1>
-        <h1 class="line-2">НАДО</h1>
-      </section>
-      <ul class="header_contacts">
-        <li class="underlined">+9 999 555 5555</li>
-        <li class="underlined">info@sobaka.ge</li>
-        <li>наб. Принсенгранг 263-265</li>
-        <li>Амстердам</li>
-      </ul>
+      </div>
     </header>
     <main>
-      <section id="home" class="home">
+      <section id="home">
         <article class="home_title">
-          <h1 class="home_title_start">ОН</h1>
-          <h1 class="home_title_middle">ТЕБЕ</h1>
-          <h1 class="home_title_end">АДО</h1>
+          <h1 class="home_title_start">YOU</h1>
+          <h1 class="home_title_middle">NEED</h1>
+          <h1 class="home_title_end">T</h1>
         </article>
         <section class="home_subtext">
           <h4 class="home_subtext-text">
-            АУКЦИОН ВЕЩЕЙ В КОТОРЫЕ НИКТО НЕ ВЕРИЛ
+            no-one believed in them, but here they are
           </h4>
-          <button class="bet-button">
-            <h4>СДЕЛАТЬ СТАВКУ</h4>
-          </button>
+          <button class="bet-button">check lots</button>
         </section>
       </section>
       <section id="lots" class="lots">
         <h2 class="lots_header">ЛОТЫ</h2>
         <section class="lots_lots-grid">
           <div class="lot">
-            <img class="lot-img" src="./assets/tim-mossholder-PBtVHdZ1OJI-unsplash.jpg" alt="" />
+            <img class="lot-img" src="assets/tim-mossholder-PBtVHdZ1OJI-unsplash.jpg" alt="" />
             <div class="lot-content">
               <h3 class="lot-header">
                 ФИЛЬМ РЕЖИССЕРА, КОТОРЫЙ БРОСИЛ КИНОШКОЛУ
@@ -66,7 +64,7 @@
             </div>
           </div>
           <div class="lot">
-            <img class="lot-img" src="./assets/piotr-stefanski-XhLiHrKd5Xc-unsplash.jpg" alt="" />
+            <img class="lot-img" src="assets/piotr-stefanski-XhLiHrKd5Xc-unsplash.jpg" alt="" />
             <div class="lot-content">
               <h3 class="lot-header">
                 КНИГА, ГДЕ ОПИСАН ОДИН СКУЧНЫЙ ДЕНЬ ИЗ ЖИЗНИ РЕКЛАМНОГО АГЕНТА
@@ -82,7 +80,7 @@
             </div>
           </div>
           <div class="lot">
-            <img class="lot-img" src="./assets/mayur-deshpande-zZPeoLxLRyM-unsplash.jpg" alt="" />
+            <img class="lot-img" src="assets/mayur-deshpande-zZPeoLxLRyM-unsplash.jpg" alt="" />
             <div class="lot-content">
               <h3 class="lot-header">
                 КАРТИНА, КОТОРУЮ ПОВТОРИТ ДАЖЕ 5-ЛЕТНИЙ СЫН МАМИНОЙ ПОДРУГИ
@@ -105,7 +103,7 @@
           <h1>НАДО</h1>
         </section>
         <aside>
-          <h2 class="about_headet">ОБ АУКЦОНЕ</h2>
+          <h2 class="about_header">ОБ АУКЦОНЕ</h2>
           <article class="about_text">
             <p>
               Здесь вы не встретите очередное пафосное собрание невероятно

@@ -1,14 +1,20 @@
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  list-style: none;
 }
 
 body {
-  background: url(./assets/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg);
+  background: url(./assets/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg) repeat-x;
   width: 100%;
   overflow-x: hidden;
-  background-repeat: repeat-x;
 }
 
 body::-webkit-scrollbar {
@@ -26,8 +32,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header {
-  background: white;
-  height: fit-content;
+  background: var(--white);
+  height: 6vh;
+  width: calc(100% - 4vh * 2);
+  padding: 4vh;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  z-index: 0;
   width: calc(100% - 4vh * 2);
   display: flex;
   flex-direction: row;
@@ -44,12 +58,16 @@ body::-webkit-scrollbar-thumb {
 .nav_links {
   display: flex;
   gap: 24px;
-  list-style: none;
   font-weight: 100;
 }
 
+.nav_links li:hover {
+  text-underline: transparent;
+  transition-duration: 0.3s;
+}
+
 .nav_links a {
-  color: black;
+  color: var(--black);
   transition-duration: 0.3s;
 }
 
@@ -67,7 +85,7 @@ body::-webkit-scrollbar-thumb {
   width: 5px;
   height: 5px;
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   border-radius: 50%;
   position: absolute;
   top: 35%;
@@ -90,46 +108,42 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   letter-spacing: 1vh;
   font-weight: bold;
-}
-
-.header_logo .line-1 {
-  transform: translateY(-10px);
-}
-
-.header_logo .line-2 {
-  transform: translateY(-20px);
+  line-height: 92%;
 }
 
 .header_logo::before {
   display: block;
   width: 85%;
-  height: 65%;
-  border: 4px solid black;
+  height: 120%;
+  border: 4px solid var(--black);
   position: absolute;
-  top: 5px;
-  left: -1px;
+  top: -10px;
+  left: 0;
   content: " ";
 }
 
 .header_contacts {
   list-style: none;
+  transform: translateX(-50px);
 }
 
 .header_contacts li {
-  width: fit-content;
+  font-size: 14px;
+  text-align: end;
 }
 
 .underlined {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--black);
 }
 
-.home {
+#home {
   position: relative;
-  height: fit-content;
-  color: white;
+  height: 76vh;
+  color: var(--white);
   background: rgba(10, 10, 10, 0.5);
   width: calc(100% - 8vh);
   padding: 5vh;
+  z-index: 200;
 }
 
 .home_title {
@@ -148,7 +162,7 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   position: absolute;
   transform: translate(30%, 0);
-  content: "O";
+  content: "D";
 }
 
 .home_title_middle {
@@ -164,7 +178,7 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   position: absolute;
   transform: translate(-140%, 0);
-  content: "H";
+  content: "I";
 }
 
 .home_title_end::first-letter {
@@ -185,10 +199,33 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bet-button {
-	background: transparent;
-	color: white;
-	border: 1px solid white;
-	padding: 10px 20px;
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 10px 20px;
+  margin: 1px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.bet-button:hover {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.2);
+  animation: smooth-border 0.3s ease-in;
+}
+
+@keyframes smooth-border {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 12px;
+  }
+}
+
+.bet-button:hover {
+  border-radius: 12px;
+  transition-duration: 0.3s;
 }
 
 .lots {
@@ -222,7 +259,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .lot-content {
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -265,7 +302,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about {
-  background: white;
+  background: var(--white);
   width: calc(100% - 10vh * 2);
   padding: 10vh;
   display: flex;
@@ -277,7 +314,7 @@ body::-webkit-scrollbar-thumb {
 .about_logo {
   margin: 0 15%;
   background: black;
-  color: white;
+  color: var(--white);
   height: fit-content;
   padding: 20px 33px;
   border-radius: 50%;
@@ -285,7 +322,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
-.about_headet {
+.about_header {
   font-size: 24px;
 }
 
