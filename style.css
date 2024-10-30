@@ -198,7 +198,7 @@ body {
 	margin: 0 18px;
 }
 
-.bet-button {
+#bet-button {
   background: transparent;
   color: var(--white);
   border: 1px solid var(--white);
@@ -229,6 +229,7 @@ body {
 .lots_header {
   font-size: 30px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .lots_lots-grid {
@@ -242,9 +243,16 @@ body {
   aspect-ratio: 1/1;
   position: relative;
 
+  &:hover,
+  &:hover .lot-img {
+    border-radius: 15px;
+    transition-duration: 0.3s;
+  }
+
   &:hover .lot-content {
     background: none;
-    transition: 0.3s;
+    color: transparent;
+    transition-duration: 0.3s;
   }
 }
 
@@ -274,6 +282,7 @@ body {
 
 .lot-header {
   font-size: 26px;
+  text-transform: uppercase;
 
   &::first-line {
     text-decoration: underline;
@@ -294,33 +303,45 @@ body {
 
   &:hover {
     border-bottom: 2px solid black;
-    font-weight: bold;
+    letter-spacing: 3px;
   }
 }
 
-.about {
+#about {
   background: var(--white);
   width: calc(100% - 10vh * 2);
+  height: 70vh;
   padding: 10vh;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   gap: 10vh
 }
 
 .about_logo {
   margin: 0 15%;
-  background: black;
+  background: var(--black);
   color: var(--white);
   height: fit-content;
+  aspect-ratio: 1/1;
   padding: 20px 33px;
   border-radius: 50%;
   font-size: 20px;
   text-align: center;
+  border: 3px solid var(--black);
+
+  &:hover {
+    background: var(--white);
+    color: var(--black);
+    transition-duration: 0.3s;
+  }
 }
 
 .about_header {
   font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 3vh;
 }
 
 .about_text {
@@ -328,7 +349,7 @@ body {
   margin: 1vh 0;
   display: flex;
   flex-direction: column;
-  gap: 1vh
+  gap: 2vh
 }
 
 @keyframes smooth-border {
