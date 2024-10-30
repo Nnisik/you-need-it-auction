@@ -15,20 +15,20 @@ body {
   background: url(./assets/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg) repeat-x;
   width: 100%;
   overflow-x: hidden;
-}
 
-body::-webkit-scrollbar {
-  width: 10px;               /* width of the entire scrollbar */
-}
+  &::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
 
-body::-webkit-scrollbar-track {
-  background: transparent;        /* color of the tracking area */
-}
+  &::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
 
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(110, 50, 50, 0.5);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: none;  /* creates padding around scroll thumb */
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(110, 50, 50, 0.5);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
+  }
 }
 
 .header {
@@ -69,36 +69,36 @@ body::-webkit-scrollbar-thumb {
 .nav_links a {
   color: var(--black);
   transition-duration: 0.3s;
-}
 
-.nav_links a:hover {
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .separation {
   position: relative;
-}
 
-.separation::before,
-.separation::after {
-  display: block;
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  border: 1px solid var(--black);
-  border-radius: 50%;
-  position: absolute;
-  top: 35%;
-  content: " ";
-}
+  &::before,
+  &::after {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    content: " ";
+  }
 
-.separation::before {
-  left: -17px;
-  content: " ";
-}
+  &::before {
+    left: -17px;
+    content: " ";
+  }
 
-.separation::after {
-  right: -17px;
+  &::after {
+    right: -17px;
+  }
 }
 
 .header_logo {
@@ -109,27 +109,27 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 1vh;
   font-weight: bold;
   line-height: 92%;
-}
 
-.header_logo::before {
-  display: block;
-  width: 85%;
-  height: 120%;
-  border: 4px solid var(--black);
-  position: absolute;
-  top: -10px;
-  left: 0;
-  content: " ";
+  &::before {
+    display: block;
+    width: 85%;
+    height: 120%;
+    border: 4px solid var(--black);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: " ";
+  }
 }
 
 .header_contacts {
   list-style: none;
   transform: translateX(-50px);
-}
 
-.header_contacts li {
-  font-size: 14px;
-  text-align: end;
+  & li {
+    font-size: 14px;
+    text-align: end;
+  }
 }
 
 .underlined {
@@ -156,13 +156,13 @@ body::-webkit-scrollbar-thumb {
 
 .home_title_start {
   position: relative;
-}
 
-.home_title_start::after {
-  bottom: 0;
-  position: absolute;
-  transform: translate(30%, 0);
-  content: "D";
+  &::after {
+    bottom: 0;
+    position: absolute;
+    transform: translate(30%, 0);
+    content: "D";
+  }
 }
 
 .home_title_middle {
@@ -172,23 +172,23 @@ body::-webkit-scrollbar-thumb {
 .home_title_end {
   text-align: end;
   position: relative;
-}
 
-.home_title_end::before {
-  bottom: 0;
-  position: absolute;
-  transform: translate(-140%, 0);
-  content: "I";
-}
+  &::before {
+    bottom: 0;
+    position: absolute;
+    transform: translate(-140%, 0);
+    content: "I";
+  }
 
-.home_title_end::first-letter {
-  margin-right: 2vh;
+  &::first-letter {
+    margin-right: 2vh;
+  }
 }
 
 .home_subtext {
   display: flex;
   justify-content: end;
-		align-items: center;
+  align-items: center;
 }
 
 .home_subtext-text {
@@ -206,32 +206,24 @@ body::-webkit-scrollbar-thumb {
   margin: 1px;
   font-size: 16px;
   text-transform: uppercase;
-}
 
-.bet-button:hover {
-  margin: 0;
-  background: rgba(255, 255, 255, 0.2);
-  animation: smooth-border 0.3s ease-in;
-}
-
-@keyframes smooth-border {
-  from {
-    border-radius: 0;
+  &:hover {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.2);
+    animation: smooth-border 0.3s ease-in;
   }
-  to {
+
+  &:hover {
     border-radius: 12px;
+    transition-duration: 0.3s;
   }
 }
 
-.bet-button:hover {
-  border-radius: 12px;
-  transition-duration: 0.3s;
-}
 
-.lots {
+#lots {
   background: white;
   width: calc(100% - 10vh * 2);
-  padding: 10vh;
+  padding: 20vh 10vh 10vh 10vh;
 }
 
 .lots_header {
@@ -249,6 +241,11 @@ body::-webkit-scrollbar-thumb {
 .lot {
   aspect-ratio: 1/1;
   position: relative;
+
+  &:hover .lot-content {
+    background: none;
+    transition: 0.3s;
+  }
 }
 
 .lot-img {
@@ -277,10 +274,10 @@ body::-webkit-scrollbar-thumb {
 
 .lot-header {
   font-size: 26px;
-}
 
-.lot-header::first-line {
-  text-decoration: underline;
+  &::first-line {
+    text-decoration: underline;
+  }
 }
 
 .lot-text {
@@ -294,11 +291,11 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 1px solid black;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
-}
 
-.lots_show-more-btn:hover {
-  border-bottom: 2px solid black;
-  font-weight: bold;
+  &:hover {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+  }
 }
 
 .about {
@@ -332,4 +329,13 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   gap: 1vh
+}
+
+@keyframes smooth-border {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 12px;
+  }
 }
