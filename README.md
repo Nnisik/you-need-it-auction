@@ -37,12 +37,17 @@ To get a local copy of this project up and running, follow these simple steps:
    ```bash
    cd you-need-it-auction
 3. Open index.html in your preffered browser.
-   
-## Testing
-Does not require testing.
+
 
 ### TODO
-* auto adding active lots information
+* Commenting and Documentation for CSS file
+* Migrate to consistent Units
+* Implement mobile version
+* Search and Filter Functionality
+* Accessibility Features 
+* API Integration
+* User Accounts
+* Testing
 
 ### Issues
 no issues found

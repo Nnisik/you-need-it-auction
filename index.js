@@ -1,36 +1,47 @@
-function goToLotsSection() {
-    document.getElementById("lots").scrollIntoView();
+// Scrolls to the certain section of the page
+function goToPageSection(sectionID) {
+    document.getElementById(sectionID).scrollIntoView();
 }
 
+// Creates a new lot element and appends it to the lots section
 function drawNewLot(lot) {
-    // initiating lot container
+    // Initiating the lot container
     let newLot = document.createElement("div");
     newLot.classList.add("lot");
-    // lot image
+
+    // Creating and appending the lot image
     const lotImage = document.createElement("img");
     lotImage.classList.add("lot-img");
-    lotImage.src = lot.img;
+    lotImage.src = lot.img; // Set the image source from the lot object
     newLot.appendChild(lotImage);
-    // information about lot
+
+    // Creating the information container for the lot
     const lotInfo = document.createElement("div");
     lotInfo.classList.add("lot-content");
-    // lot header
+
+    // Creating and appending the lot header
     const lotHeader = document.createElement("h3");
     lotHeader.classList.add("lot-header");
-    lotHeader.append(lot.header);
+    lotHeader.append(lot.header); // Set the header text from the lot object
     lotInfo.appendChild(lotHeader);
-    // lot description
+
+    // Creating and appending the lot description
     const lotDescription = document.createElement("p");
     lotDescription.classList.add("lot-text");
-    lotDescription.append(lot.description);
+    lotDescription.append(lot.description); // Set the description text from the lot object
     lotInfo.appendChild(lotDescription);
 
+    // Append lot information to the main lot container
     newLot.appendChild(lotInfo);
-    lotsSection.appendChild(newLot);
+    lotsSection.appendChild(newLot); // Append the new lot to the lots section
 }
 
+// Selecting the sections of the page for manipulation
 var lotsSection = document.querySelector(".lots_lots-grid");
 var aboutSection = document.querySelector(".about_text");
+
+// Array of lots information including images, headers, and descriptions
+// Lot objects
 const lotsInfo = [
     {
         "img": "assets/pixlr-image-generator-fe71e76f-6fb2-4583-b639-578520d293ba.png",
@@ -59,7 +70,7 @@ const lotsInfo = [
             "into their home, this piece will become the centerpiece of any room."
     }
 ];
-
+// About text paragraphs
 const aboutText = [
     {
         text: "Welcome to the Mystical Treasures Auction, a unique opportunity to acquire extraordinary artifacts " +
@@ -78,15 +89,16 @@ const aboutText = [
     }
 ];
 
+// On window load, draw all lots and populate the about section
 window.onload = () => {
     lotsInfo.forEach(lot => {
-        drawNewLot(lot);
+        drawNewLot(lot); // Draw each lot on the page
     });
 
     aboutText.forEach(paragraph => {
         const paragraphText = document.createElement("p");
-        paragraphText.append(paragraph.text);
-        aboutSection.appendChild(paragraphText);
+        paragraphText.append(paragraph.text); // Append the paragraph text
+        aboutSection.appendChild(paragraphText); // Add paragraph to about section
     })
 }
 
@@ -94,6 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('Happy developing ✨')
 
     document.getElementById("bet-button").onclick = () => {
-        goToLotsSection();
+        goToPageSection("lots"); // Trigger scroll to lots section on button click
     }
 });
