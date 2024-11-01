@@ -223,6 +223,7 @@ body {
 #lots {
   background: white;
   width: calc(100% - 10vh * 2);
+  height: fit-content;
   padding: 20vh 10vh 10vh 10vh;
 }
 
@@ -233,9 +234,10 @@ body {
 }
 
 .lots_lots-grid {
-  margin: 2vh 0 1vh;
+  margin: 2vh 5vh 1vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 5vh;
 }
 
