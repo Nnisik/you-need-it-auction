@@ -1,0 +1,410 @@
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
+/* Resetting margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in total width and height */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* Body Styles */
+body {
+  background: url(../images/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg) repeat-x;
+  background-size: cover; /* Ensure the background covers the entire area */
+  background-position: center; /* Center the background image */
+  overflow-x: hidden;
+
+  /* Custom Scrollbar Styles */
+  &::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(110, 50, 50, 0.5);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
+  }
+}
+
+/* Header Styles */
+.header {
+  background: var(--white);
+  height: 10vh;
+  padding: 2vh 0; /* Improved padding */
+  width: 100%;
+  z-index: 10; /* Ensures header is above other elements */
+}
+
+.header-container {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vh;
+}
+
+.nav {
+  height: 100%;
+}
+
+.nav_links {
+  display: flex;
+  gap: 24px;
+  font-weight: 100;
+  list-style: none;
+
+  & li:hover {
+    text-underline: transparent;
+    transition-duration: 0.3s;
+  }
+
+  & a {
+    color: var(--black);
+    text-decoration: none;
+    transition-duration: 0.3s;
+
+    &:hover {
+      text-decoration: underline; /* Clearer hover effect */
+    }
+  }
+}
+
+.separation {
+  position: relative;
+
+  &::before,
+  &::after {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    content: " ";
+  }
+
+  &::before {
+    left: -17px;
+    content: " ";
+  }
+
+  &::after {
+    right: -17px;
+  }
+}
+
+.header_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  letter-spacing: 1vh;
+  font-weight: bold;
+  line-height: 92%;
+
+  &::before {
+    display: block;
+    width: 85%;
+    height: 120%;
+    border: 4px solid var(--black);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    content: " ";
+  }
+}
+
+.header_contacts {
+  list-style: none;
+  transform: translateX(-50px);
+
+  & li {
+    font-size: 14px;
+    text-align: end;
+  }
+}
+
+/* Home Section Styles */
+#home {
+  height: 90vh;
+  color: var(--white);
+  background: rgba(10, 10, 10, 0.5);
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.home_title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 6rem; /* Responsive font size */
+  margin: 8vh 0 10vh;
+}
+
+.home_title_start {
+  position: relative;
+
+  &::after {
+    bottom: 0;
+    position: absolute;
+    transform: translate(30%, 0);
+    content: "D";
+  }
+}
+
+.home_title_middle {
+  text-align: center;
+}
+
+.home_title_end {
+  text-align: end;
+  position: relative;
+
+  &::before {
+    bottom: 0;
+    position: absolute;
+    transform: translate(-140%, 0);
+    content: "I";
+  }
+
+  &::first-letter {
+    margin-right: 2vh;
+  }
+}
+
+.home_subtext {
+  display: flex;
+  justify-content: end; /* Center button horizontally */
+  align-items: center;
+  margin-top: 1rem; /* Space between title and button */
+}
+
+.home_subtext-text {
+	letter-spacing: 5px;
+	font-weight: 100;
+	font-size: 1rem;
+	margin: 0 18px;
+}
+
+#bet-button {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+  }
+}
+
+/* Lots Section Styles */
+#lots {
+  background: var(--white);
+  padding: 20vh 10vh;
+  height: 100%;
+}
+
+.lots_header {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lots-grid {
+  margin: 1vh 5vh;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 500px));
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  gap: 5vh;
+}
+
+.lot {
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden; /* Hide overflow for smoother visuals */
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:hover .lot-img {
+    border-radius: 15px;
+  }
+
+  &:hover .lot-content {
+    background: none;
+    color: transparent;
+    transition-duration: 0.3s;
+  }
+}
+
+.lot-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.lot-content {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  background: rgba(10, 10, 10, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.lot-header,
+.lot-text {
+  margin: 3vh;
+}
+
+.lot-header {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+  &::first-line {
+    text-decoration: underline;
+  }
+}
+
+.lot-text {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* Show More Button */
+.show-more-btn {
+  transform: translateY(-5px);
+  width: fit-content;
+  border-bottom: 1px solid var(--black);
+  transition-duration: 0.3s;
+
+  &:hover {
+    border-bottom: 2px solid var(--black);
+    letter-spacing: 2px; /* Letter spacing effect on hover */
+  }
+}
+
+/* About Section Styles */
+#about {
+  background: var(--white);
+  height: 100vh;
+  padding: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10vh
+}
+
+.about_logo {
+  height: 150px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 15%;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 1rem;
+  border: 3px solid var(--black);
+  transition-duration: 0.3s;
+
+  &:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+}
+
+.about_header {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 3vh;
+}
+
+.about_text {
+  width: 70%;
+  margin: 1vh 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh
+}
+
+/* FIXME: mobile and tablet layouts are broken "/
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .home_title {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+  #bet-button {
+    font-size: 14px; /* Adjust button size */
+  }
+
+  .lots_header {
+    font-size: 1.5rem; /* Adjust header size */
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    padding: 2vh 5vw; /* Adjust padding for smaller screens */
+  }
+
+  #lots {
+    background: var(--white);
+    padding: 2vh 1vh;
+    height: 100%;
+  }
+
+  .lots_header,
+  .show-more-btn {
+    transform: translateX(5vh);
+  }
+
+  .lots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lot-header {
+    font-size: 1rem;
+  }
+
+  .lot-text {
+    display: none;
+  }
+
+  #about {
+    flex-direction: column-reverse;
+  }
+
+  .about_text {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+
+}
