@@ -11,7 +11,6 @@ Single yet elegant web page auction page designed for an online auction platform
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Testing](#testing)
 
 ## Features
 
@@ -36,11 +35,10 @@ To get a local copy of this project up and running, follow these simple steps:
 2. Navigate to the project directory:
    ```bash
    cd you-need-it-auction
-3. Open index.html in your preffered browser.
+3. Open index.html in your preferred browser.
 
 
 ### TODO
-* Commenting and Documentation for CSS file
 * Migrate to consistent Units
 * Implement mobile version
 * Search and Filter Functionality
@@ -50,4 +48,4 @@ To get a local copy of this project up and running, follow these simple steps:
 * Testing
 
 ### Issues
-no issues found
+* fix mobile version layout

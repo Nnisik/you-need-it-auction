@@ -3,19 +3,21 @@
   --black: #000;
 }
 
+/* Resetting margins and paddings */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in total width and height */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  list-style: none;
 }
 
+/* Body Styles */
 body {
   background: url(./assets/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg) repeat-x;
-  width: 100%;
   overflow-x: hidden;
 
+  /* Custom Scrollbar Styles */
   &::-webkit-scrollbar {
     width: 10px;               /* width of the entire scrollbar */
   }
@@ -31,47 +33,48 @@ body {
   }
 }
 
+/* Header Styles */
 .header {
   background: var(--white);
-  height: 6vh;
-  width: calc(100% - 4vh * 2);
-  padding: 4vh;
+  height: 10vh;
+  padding: 2vh 0; /* Improved padding */
+  width: 100%;
+  z-index: 10; /* Ensures header is above other elements */
 }
 
 .header-container {
   position: fixed;
-  top: 0;
-  z-index: 0;
-  width: calc(100% - 4vh * 2);
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 4vh;
+  padding: 0 4vh;
 }
 
 .nav {
   height: 100%;
-  padding-bottom: 3vh;
 }
 
 .nav_links {
   display: flex;
   gap: 24px;
   font-weight: 100;
-}
+  list-style: none;
 
-.nav_links li:hover {
-  text-underline: transparent;
-  transition-duration: 0.3s;
-}
+  & li:hover {
+    text-underline: transparent;
+    transition-duration: 0.3s;
+  }
 
-.nav_links a {
-  color: var(--black);
-  transition-duration: 0.3s;
-
-  &:hover {
+  & a {
+    color: var(--black);
     text-decoration: none;
+    transition-duration: 0.3s;
+
+    &:hover {
+      text-decoration: underline; /* Clearer hover effect */
+    }
   }
 }
 
@@ -132,25 +135,22 @@ body {
   }
 }
 
-.underlined {
-  border-bottom: 2px solid var(--black);
-}
-
+/* Home Section Styles */
 #home {
-  position: relative;
-  height: 76vh;
+  height: 90vh;
   color: var(--white);
   background: rgba(10, 10, 10, 0.5);
-  width: calc(100% - 8vh);
   padding: 5vh;
-  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 .home_title {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 100px;
+  font-size: 6rem; /* Responsive font size */
   margin: 8vh 0 10vh;
 }
 
@@ -187,14 +187,15 @@ body {
 
 .home_subtext {
   display: flex;
-  justify-content: end;
+  justify-content: end; /* Center button horizontally */
   align-items: center;
+  margin-top: 1rem; /* Space between title and button */
 }
 
 .home_subtext-text {
 	letter-spacing: 5px;
 	font-weight: 100;
-	font-size: 14px;
+	font-size: 1rem;
 	margin: 0 18px;
 }
 
@@ -203,38 +204,31 @@ body {
   color: var(--white);
   border: 1px solid var(--white);
   padding: 10px 20px;
-  margin: 1px;
   font-size: 16px;
   text-transform: uppercase;
+  transition-duration: 0.3s;
 
   &:hover {
-    margin: 0;
     background: rgba(255, 255, 255, 0.2);
-    animation: smooth-border 0.3s ease-in;
-  }
-
-  &:hover {
     border-radius: 12px;
-    transition-duration: 0.3s;
   }
 }
 
-
+/* Lots Section Styles */
 #lots {
-  background: white;
-  width: calc(100% - 10vh * 2);
-  height: fit-content;
-  padding: 20vh 10vh 10vh 10vh;
+  background: var(--white);
+  padding: 20vh 10vh;
+  height: 100%;
 }
 
 .lots_header {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.lots_lots-grid {
-  margin: 2vh 5vh 1vh;
+.lots-grid {
+  margin: 1vh 5vh;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -244,11 +238,12 @@ body {
 .lot {
   aspect-ratio: 1/1;
   position: relative;
+  overflow: hidden; /* Hide overflow for smoother visuals */
+  transition-duration: 0.3s;
 
   &:hover,
   &:hover .lot-img {
     border-radius: 15px;
-    transition-duration: 0.3s;
   }
 
   &:hover .lot-content {
@@ -296,23 +291,23 @@ body {
   letter-spacing: 2px;
 }
 
-.lots_show-more-btn {
+/* Show More Button */
+.show-more-btn {
   transform: translateY(-5px);
   width: fit-content;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--black);
   transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
 
   &:hover {
-    border-bottom: 2px solid black;
-    letter-spacing: 3px;
+    border-bottom: 2px solid var(--black);
+    letter-spacing: 2px; /* Letter spacing effect on hover */
   }
 }
 
+/* About Section Styles */
 #about {
   background: var(--white);
-  width: calc(100% - 10vh * 2);
-  height: 70vh;
+  height: 100vh;
   padding: 10vh;
   display: flex;
   flex-direction: row;
@@ -322,21 +317,23 @@ body {
 }
 
 .about_logo {
+  height: 150px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   margin: 0 15%;
   background: var(--black);
   color: var(--white);
-  height: fit-content;
-  aspect-ratio: 1/1;
-  padding: 20px 33px;
   border-radius: 50%;
-  font-size: 20px;
-  text-align: center;
+  font-size: 1rem;
   border: 3px solid var(--black);
+  transition-duration: 0.3s;
 
   &:hover {
     background: var(--white);
     color: var(--black);
-    transition-duration: 0.3s;
   }
 }
 
@@ -354,11 +351,24 @@ body {
   gap: 2vh
 }
 
-@keyframes smooth-border {
-  from {
-    border-radius: 0;
+/* FIXME: mobile and tablet layouts are broken "/
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .home_title {
+    font-size: 3rem; /* Adjust font size for smaller screens */
   }
-  to {
-    border-radius: 12px;
+
+  #bet-button {
+    font-size: 14px; /* Adjust button size */
+  }
+
+  .lots_header {
+    font-size: 1.5rem; /* Adjust header size */
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    padding: 2vh 5vw; /* Adjust padding for smaller screens */
   }
 }
