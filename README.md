@@ -40,11 +40,11 @@ To get a local copy of this project up and running, follow these simple steps:
 
 
 ### TODO
-* Search and Filter Functionality
+* Smooth scrolling
+* Optimize page loading (for now takes to long)
 * Accessibility Features 
-* User Accounts
 * Testing
+* Search and Filter Functionality
 
 ### Issues
-* Mobile layout broken
-* In prod lots cards size is incorrect (max-width)
+* Navbar need to hide when going throught "Home" section and ".lots-grid"
