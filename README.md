@@ -39,7 +39,6 @@ To get a local copy of this project up and running, follow these simple steps:
 
 
 ### TODO
-* Restructure folders
 * Migrate to consistent Units
 * Implement mobile version
 * Search and Filter Functionality
@@ -47,6 +46,7 @@ To get a local copy of this project up and running, follow these simple steps:
 * API Integration
 * User Accounts
 * Testing
+* JSON
 
 ### Issues
 * Mobile layout broken
