@@ -19,10 +19,11 @@ Single yet elegant web page auction page designed for an online auction platform
 - Attractive auction item display
 - Simple navigation
  
-## Technologies used 
-* HTML
+## Technologies used
 * CSS
 * JavaScript
+* HTML
+* JSON
 
 ## Getting Started
 
@@ -39,15 +40,11 @@ To get a local copy of this project up and running, follow these simple steps:
 
 
 ### TODO
-* Restructure folders
-* Migrate to consistent Units
-* Implement mobile version
 * Search and Filter Functionality
 * Accessibility Features 
-* API Integration
 * User Accounts
 * Testing
 
 ### Issues
 * Mobile layout broken
-* In prod lots cards size is incorect (max-width)
+* In prod lots cards size is incorrect (max-width)
