@@ -44,6 +44,7 @@ To get a local copy of this project up and running, follow these steps:
 * Enhance accessibility features
 * Conduct thorough testing
 * Add search and filter functionality
+* Migrate to using Webpack
 
 ### Known Issues
 * Navbar does not hide when navigating through the "Home" section and ".lots-grid."
