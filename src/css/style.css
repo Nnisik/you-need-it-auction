@@ -7,7 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Ensures padding and border are included in total width and height */
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
@@ -15,22 +15,22 @@
 /* Body Styles */
 body {
   background: url(../images/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg) repeat-x center;
-  background-size: cover; /* Ensure the background covers the entire area */
+  background-size: cover;
   overflow-x: hidden;
 
   /* Custom Scrollbar Styles */
   &::-webkit-scrollbar {
-    width: 10px;               /* width of the entire scrollbar */
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent;        /* color of the tracking area */
+    background: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(110, 50, 50, 0.5);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: none;  /* creates padding around scroll thumb */
+    background-color: rgba(110, 50, 50, 0.5);
+    border-radius: 20px;
+    border: none;
   }
 }
 
@@ -38,9 +38,9 @@ body {
 .header {
   background: var(--white);
   height: 10vh;
-  padding: 2vh 0; /* Improved padding */
+  padding: 2vh 0;
   width: 100%;
-  z-index: 10; /* Ensures header is above other elements */
+  z-index: 10;
 }
 
 .header-container {
@@ -144,14 +144,14 @@ body {
   padding: 5vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
 }
 
 .home_title {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 6rem; /* Responsive font size */
+  font-size: 6rem;
   margin: 8vh 0 10vh;
 }
 
@@ -188,16 +188,17 @@ body {
 
 .home_subtext {
   display: flex;
-  justify-content: end; /* Center button horizontally */
+  justify-content: end;
   align-items: center;
-  margin: 1rem 0; /* Space between title and button */
+  margin: 1rem 0 3rem;
 }
 
 .home_subtext-text {
 	letter-spacing: 5px;
 	font-weight: 100;
 	font-size: 1rem;
-	margin: 0 1rem;
+	text-align: center;
+    margin-right: 1rem;
 }
 
 #bet-button {
@@ -229,17 +230,17 @@ body {
 }
 
 .lots-grid {
-  margin: 1vh 5vh;
+  margin: 1vh 0;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2vh;
+  gap: 5vh;
 }
 
 .lot {
   aspect-ratio: 1/1;
   position: relative;
-  overflow: hidden; /* Hide overflow for smoother visuals */
+  overflow: hidden;
   transition-duration: 0.3s;
 
   &:hover,
@@ -293,7 +294,7 @@ body {
 }
 
 /* Show More Button */
-.show-more-btn {
+#show-more-btn {
   transform: translateY(-5px);
   width: fit-content;
   border-bottom: 1px solid var(--black);
@@ -301,7 +302,7 @@ body {
 
   &:hover {
     border-bottom: 2px solid var(--black);
-    letter-spacing: 2px; /* Letter spacing effect on hover */
+    letter-spacing: 2px;
   }
 }
 
@@ -352,25 +353,24 @@ body {
   gap: 2vh
 }
 
-/* FIXME: mobile and tablet layouts are broken "/
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .home_title {
-    font-size: 3rem; /* Adjust font size for smaller screens */
+    font-size: 3rem;
   }
 
   #bet-button {
-    font-size: 14px; /* Adjust button size */
+    font-size: 14px;
   }
 
   .lots_header {
-    font-size: 1.5rem; /* Adjust header size */
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   #home {
-    padding: 2vh 5vw; /* Adjust padding for smaller screens */
+    padding: 2vh 5vw;
   }
 
   #lots {
