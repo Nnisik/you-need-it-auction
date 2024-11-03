@@ -47,8 +47,3 @@ To get a local copy of this project up and running, follow these steps:
 
 ### Known Issues
 * Navbar does not hide when navigating through the "Home" section and ".lots-grid."
-
-### Conclusion
-With these revisions, your README will provide clearer information and create a more polished impression. It's a great way to showcase your project to potential employers or collaborators!
-
-
