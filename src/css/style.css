@@ -14,9 +14,8 @@
 
 /* Body Styles */
 body {
-  background: url(../images/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg) repeat-x;
+  background: url(../images/nana-nakazwe-r_cUZ3vJGyM-unsplash.jpg) repeat-x center;
   background-size: cover; /* Ensure the background covers the entire area */
-  background-position: center; /* Center the background image */
   overflow-x: hidden;
 
   /* Custom Scrollbar Styles */
@@ -191,14 +190,14 @@ body {
   display: flex;
   justify-content: end; /* Center button horizontally */
   align-items: center;
-  margin-top: 1rem; /* Space between title and button */
+  margin: 1rem 0; /* Space between title and button */
 }
 
 .home_subtext-text {
 	letter-spacing: 5px;
 	font-weight: 100;
 	font-size: 1rem;
-	margin: 0 18px;
+	margin: 0 1rem;
 }
 
 #bet-button {
@@ -233,9 +232,8 @@ body {
   margin: 1vh 5vh;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 500px));
-  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
-  gap: 5vh;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2vh;
 }
 
 .lot {
@@ -277,7 +275,7 @@ body {
 
 .lot-header,
 .lot-text {
-  margin: 3vh;
+  margin: 3vh 3vh 1vh;
 }
 
 .lot-header {
@@ -290,7 +288,7 @@ body {
 }
 
 .lot-text {
-  font-size: 16px;
+  font-size: 0.7rem;
   letter-spacing: 2px;
 }
 

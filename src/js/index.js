@@ -37,14 +37,14 @@ function drawNewLot(lot) {
 }
 
 // Selecting the sections of the page for manipulation
-const lotsSection = document.querySelector(".lots_lots-grid");
+const lotsSection = document.querySelector(".lots-grid");
 const aboutSection = document.querySelector(".about_text");
 
 // Array of lots information including images, headers, and descriptions
 // Lot objects
 const lotsInfo = [
     {
-        "img": "assets/pixlr-image-generator-fe71e76f-6fb2-4583-b639-578520d293ba.png",
+        "img": "src/images/pixlr-image-generator-fe71e76f-6fb2-4583-b639-578520d293ba.png",
         "header": "The Enchanted Hourglass",
         "description": "Step into a realm of magic with this exquisite hourglass, crafted from shimmering crystal " +
             "and enchanted with ancient runes. As time flows through it, the sand transforms into sparkling " +
@@ -53,7 +53,7 @@ const lotsInfo = [
             "itself. Perfect for collectors of mystical artifacts or those seeking a unique conversation starter."
     },
     {
-        "img": "assets/pixlr-image-generator-41d15156-b956-4a8f-8b6b-14519b88baf4.png",
+        "img": "src/images/pixlr-image-generator-41d15156-b956-4a8f-8b6b-14519b88baf4.png",
         "header": "Victorian-Era Music Box",
         "description": "Step back in time with this exquisite Victorian music box, intricately carved from mahogany " +
             "and adorned with brass accents. When wound, it plays a delicate rendition of Clair de Lune, transporting " +
@@ -61,7 +61,7 @@ const lotsInfo = [
             "the past. Ideal for music enthusiasts and vintage collectors."
     },
     {
-        "img": "assets/pixlr-image-generator-7f235d38-0ad7-433e-9419-cd4e8c716fee.png",
+        "img": "src/images/pixlr-image-generator-7f235d38-0ad7-433e-9419-cd4e8c716fee.png",
         "header": "The Whispering Woods Painting",
         "description": "Immerse yourself in the serene beauty of Whispering Woods, a breathtaking oil painting by " +
             "renowned artist Elara Dune. This vibrant landscape captures a magical forest at twilight, where the trees " +
