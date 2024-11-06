@@ -38,13 +38,11 @@ To get a local copy of this project up and running, follow these steps:
    cd you-need-it-auction
 3. Open index.html in your preferred browser.
 
+### Currently Work On
+* Migrate to using Webpack
+
 ### Future Improvements
 * Implement smooth scrolling
 * Optimize page loading time
-* Enhance accessibility features
-* Conduct thorough testing
-* Add search and filter functionality
-* Migrate to using Webpack
 
 ### Known Issues
-* Navbar does not hide when navigating through the "Home" section and ".lots-grid."

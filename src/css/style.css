@@ -128,7 +128,6 @@ body {
 
 .header_right-side {
   list-style: none;
-  transform: translateX(-50px);
 
   & li {
     font-size: 14px;
