@@ -39,10 +39,14 @@ To get a local copy of this project up and running, follow these steps:
 3. Open index.html in your preferred browser.
 
 ### Currently Work On
-* Migrate to using Webpack
+* 
 
 ### Future Improvements
-* Implement smooth scrolling
-* Optimize page loading time
+* Rebuild using React.Js
+* Integrate Webpack and Babel
+* Fetch API
+* BEM naming
+* PostCSS
 
 ### Known Issues
+* 
