@@ -1,6 +1,6 @@
 // Scrolls to the certain section of the page
 function goToPageSection(sectionID) {
-    document.getElementById(sectionID).scrollIntoView();
+    document.getElementById(sectionID).scrollIntoView({ behavior: "smooth" });
 }
 
 // Creates a new lot element and appends it to the lots section
@@ -13,6 +13,7 @@ function drawLot(lot) {
     const lotImage = document.createElement("img");
     lotImage.classList.add("lot-img");
     lotImage.src = lot.img; // Set the image source from the lot object
+    lotImage.alt = lot.header || "Lot image"; // Provide a fallback if no header is present
     newLot.appendChild(lotImage);
 
     // Creating the information container for the lot
@@ -36,25 +37,22 @@ function drawLot(lot) {
     lotsSection.appendChild(newLot); // Append the new lot to the lots section
 }
 
-function drawLotsSection() {
-    fetch("./src/json/data-lots.json")
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error("Error: no file found");
-            }
-            return res.json()
-        })
-        .then((data) => {
-            data.forEach((lot) => {
-                drawLot(lot);
-            })
-        })
-        .catch((error) => {
-            console.error("Unable to fetch data:", error)
-        });
+async function drawLotsSection() {
+    try {
+        const res = await fetch("./src/json/data-lots.json");
+        if (!res.ok) {
+            throw new Error("Error: no file found");
+        }
+        const data = await res.json();
+        data.forEach((lot) => drawLot(lot));
+    } catch (error) {
+        console.error("Unable to fetch data:", error);
+    }
 }
 
+
 function fillAboutSection() {
+
     fetch("./src/json/data-about.json")
         .then((res) => {
             if (!res.ok) {
@@ -78,14 +76,11 @@ function fillAboutSection() {
 const lotsSection = document.querySelector(".lots-grid");
 const aboutSection = document.querySelector(".about_text");
 
-// On window load, draw all lots and populate the about section
-window.onload = () => {
-    drawLotsSection();
-    fillAboutSection();
-}
-
 document.addEventListener("DOMContentLoaded", () => {
     console.log('Happy developing ✨')
+
+    drawLotsSection();
+    fillAboutSection();
 
     document.getElementById("bet-button").onclick = () => {
         goToPageSection("lots"); // Trigger scroll to lots section on button click
@@ -103,12 +98,9 @@ window.addEventListener('scroll', () => {
     // Ensure the integer value stays between 1 and 100
     const clampedValue = Math.min(100, Math.max(1, intValue));
 
-    if (((clampedValue > 4) & (clampedValue < 44)) || ((clampedValue > 54) & (clampedValue < 89))) {
-        document.querySelector("header").style.opacity = 0;
-    }
-    else {
-        document.querySelector("header").style.opacity = 100;
-    }
+    const isHeaderHidden = (clampedValue > 4 && clampedValue < 44) || (clampedValue > 54 && clampedValue < 89);
+    document.querySelector("header").style.opacity = isHeaderHidden ? 0 : 1;
+
 
     // Print the integer value to the console
     console.log(clampedValue);
