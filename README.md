@@ -39,13 +39,11 @@ To get a local copy of this project up and running, follow these steps:
 3. Open index.html in your preferred browser.
 
 ### Currently Work On
-* 
+* Integrate Webpack and Babel
 
 ### Future Improvements
 * Rebuild using React.Js
-* Integrate Webpack and Babel
 * Fetch API
-* BEM naming
 * PostCSS
 
 ### Known Issues

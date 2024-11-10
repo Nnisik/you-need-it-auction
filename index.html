@@ -8,59 +8,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700&family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/mobile-style.css" />
+    <link rel="stylesheet" href="src/css/tablet-style.css" />
   </head>
   <body id="page-top">
     <header class="header">
-      <div class="header-container">
+      <div class="header__container">
         <nav class="nav">
-          <ul class="nav_links">
+          <ul class="nav__links">
             <li><a href="#page-top">home</a></li>
             <li class="separation"><a href="#lots">lots</a></li>
             <li><a href="#about">about</a></li>
           </ul>
         </nav>
-        <section class="header_logo">
+        <section class="header__logo">
           <h1>YOU</h1>
           <h1 class="line-1">NEED</h1>
           <h1 class="line-2">IT</h1>
         </section>
-        <div aria-hidden="true" class="header_right-side">
+        <div aria-hidden="true" class="header--right-side">
         </div>
       </div>
     </header>
     <main>
       <section id="home">
-      <article class="home_title">
-        <h1 class="home_title_start">YOU</h1>
-        <h1 class="home_title_middle">NEED</h1>
-        <h1 class="home_title_end">T</h1>
+      <article class="home__title">
+        <h1 class="home__title--start">YOU</h1>
+        <h1 class="home__title--middle">NEED</h1>
+        <h1 class="home__title--end">T</h1>
       </article>
-      <section class="home_subtext">
-        <h4 class="home_subtext-text">
+      <section class="home--subtext">
+        <h4 class="home--subtext__text">
           no-one believed in them, but here they are
         </h4>
         <button id="bet-button">check lots</button>
       </section>
     </section>
     <section id="lots">
-      <h2 class="lots_header">lots</h2>
-      <section class="lots-grid">
+      <h2 class="lots__header">lots</h2>
+      <section class="lots__grid">
     </section>
     <p id="show-more-btn">more</p>
     </section>
       <section id="about">
-        <section class="about_logo">
+        <section class="about__logo">
           <h1>YOU</h1>
           <h1>NEED</h1>
           <h1>IT</h1>
         </section>
         <aside>
-          <h2 class="about_header">About This Auction:</h2>
-          <article class="about_text">
+          <h2 class="about__header">About This Auction:</h2>
+          <article class="about__text">
           </article>
         </aside>
       </section>
     </main>
-    <script src="src/js/index.js"></script>
+    <script src="index.js"></script>
+    <script src="src/js/about.js"></script>
+    <script src="src/js/lots.js"></script>
+    <script src="src/js/scroll.js"></script>
   </body>
 </html>
