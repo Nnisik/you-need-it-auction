@@ -47,4 +47,4 @@ To get a local copy of this project up and running, follow these steps:
 * PostCSS
 
 ### Known Issues
-* 
+* available lots don't appear
